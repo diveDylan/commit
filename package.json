@@ -1,0 +1,29 @@
+{
+  "name": "cz",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diveDylan/test-git-commander.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diveDylan/test-git-commander/issues"
+  },
+  "homepage": "https://github.com/diveDylan/test-git-commander#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^5.1.0",
+    "inquirer": "^7.1.0",
+    "inquirer-select-line": "^1.1.3"
+  },
+  "bin": {
+    "commit": "./bin/commit"
+  },
+  "devDependencies": {},
+  "description": ""
+}
