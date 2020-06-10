@@ -20,39 +20,38 @@ const functionLineList = {
 };
 // 主函数
 const run = async () => {
-  // try {
-  //   const answers = await inquirer.prompt([
-  //     gitLineList,
-  //     functionLineList,
-  //   ])
-  //   gitType = prefix[answers.git].type
-  //   functionType = types[answers.function]
-  // } catch(e) {
-  //   console.log(e)
-  //   throw Error('select error')
-  // }
+  try {
+    const answers = await inquirer.prompt([
+      gitLineList,
+      functionLineList,
+    ])
+    gitType = prefix[answers.git].type
+    functionType = types[answers.function]
+  } catch(e) {
+    console.log(e)
+    throw Error('select error')
+  }
   
-  // try {
-  //   const answers = await inquirer.prompt([
-  //     {
-  //       message: '请输入你的任务号',
-  //       name: 'number'
-  //     },
-  //     {
-  //       message: '请输入你的commit message',
-  //       name: 'message'
-  //     }
-  // ])
-  //   gitMessage = answers.message
-  //   functionNumber = answers.number
-  // } catch(e) {
-  //   console.log(e)
-  //   throw Error('commit message error')
-  // }
-  // exec(`git commit -m "${gitType} [${appId}] ${types}-${functionNumber} ${gitMessage}"`, function(err, res) {
-  exec(`git commit -m `, function(err, res) {
+  try {
+    const answers = await inquirer.prompt([
+      {
+        message: '请输入你的任务号',
+        name: 'number'
+      },
+      {
+        message: '请输入你的commit message',
+        name: 'message'
+      }
+  ])
+    gitMessage = answers.message
+    functionNumber = answers.number
+  } catch(e) {
+    console.log(e)
+    throw Error('commit message error')
+  }
+  exec(`git commit -m "${gitType} [${appId}] ${types}-${functionNumber} ${gitMessage}"`, function(err, res) {
     console.log(err, res)
-    if(err) console.log('err', err)
+    if(err) throw Error('git commit failed')
   })
 }
 
