@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 const { prefix, types, appId } = require('./gitConfig')
-console.log(prefix, types)
 const inquirer = require('inquirer')
 inquirer.registerPrompt('selectLine', require('inquirer-select-line'));
 let gitType, functionType, functionNumber, gitMessage

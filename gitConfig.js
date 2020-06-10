@@ -8,6 +8,7 @@ module.exports = {
     { type: 'test',label: '测试用例修改' },
     { type: 'chore',label: '其他修改, 比如构建流程, 依赖管理' }
   ],
-  types: ['EC', 'KND', 'JIR', 'ISSUE'],
-  appId: ''
+  types: ['BUG', 'OSS', 'JIRA', 'ISSUE'],
+  // types: ['EC', 'KND', 'JIR', 'ISSUE'],
+  appId: 'dylan'
 }
