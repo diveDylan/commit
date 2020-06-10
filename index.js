@@ -4,7 +4,7 @@ console.log(prefix, types)
 const inquirer = require('inquirer')
 inquirer.registerPrompt('selectLine', require('inquirer-select-line'));
 let gitType, functionType, functionNumber, gitMessage
-const child = require('child_process');
+const { exec } = require('child_process');
 
 const gitLineList = {
   type: 'selectLine',
@@ -50,11 +50,10 @@ const run = async () => {
     console.log(e)
     throw Error('commit message error')
   }
-  try {
-    child.exec(`'git commit -m "${gitType} [${appId}] ${types}-${functionNumber} ${gitMessage}"'`)
-  }catch(e) {
-    throw Error('commit failed')
-  }
+  exec(`git commit -m "${gitType} [${appId}] ${types}-${functionNumber} ${gitMessage}"`, function(err, res) {
+    console.log(err, res)
+    if(err) throw Error('commit failed')
+  })
 }
 run()
 
