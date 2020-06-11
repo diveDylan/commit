@@ -49,7 +49,7 @@ const run = async () => {
     console.log(e)
     throw Error('commit message error')
   }
-  exec(`git commit -m "${gitType} [${appId}] ${types}-${functionNumber} ${gitMessage}"`, function(err, res) {
+  exec(`git commit -m "${gitType} [${appId}] ${functionType}-${functionNumber} ${gitMessage}"`, function(err, res) {
     console.log(err, res)
     if(err) throw Error('git commit failed')
   })
