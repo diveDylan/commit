@@ -31,7 +31,6 @@ const run = async () => {
     console.log(e)
     throw Error('select error')
   }
-  
   try {
     const answers = await inquirer.prompt([
       {
