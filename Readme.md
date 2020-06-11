@@ -1,6 +1,9 @@
 ### commit
 a small git commit lint tool
 
+### demo
+<img src="./demo.gif">
+
 ## test
 with node
 ``` bash
