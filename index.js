@@ -51,7 +51,6 @@ const run = async () => {
     if(err) throw Error('git commit failed')
   })
 }
-
 run()
 
 
