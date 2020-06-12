@@ -19,4 +19,12 @@ in node_modules styles
 npm link
 commit
 ```
+### config your git lint
+```bash
+### change your commit config here
+vim gitConfig.js
+
+### import your config, update your select options
+vim index.js
+```
 
